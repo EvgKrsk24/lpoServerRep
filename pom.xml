@@ -21,6 +21,8 @@
             <artifactId>spring-core</artifactId>
             <version>5.3.23</version>
         </dependency>
+
+<!--        WEB-->
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -35,6 +37,8 @@
             <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+
+<!--        DataBase-->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
@@ -51,6 +55,12 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.5.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.9.0</version>
         </dependency>
 
 
