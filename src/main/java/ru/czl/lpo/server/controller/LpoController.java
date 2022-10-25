@@ -1,27 +1,46 @@
 package ru.czl.lpo.server.controller;
 
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 import ru.czl.lpo.server.entity.InfoDistrict;
+import ru.czl.lpo.server.service.InfoDistrictService;
+
+import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/lpo")
 public class LpoController {
 
-    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @Autowired
+    private InfoDistrictService service;
+
+//    @Autowired
+//    private InfoDistrictRepository infoDistrictRepository;
+
+    @RequestMapping(value = "/infodistricts", method = RequestMethod.GET)
     @ResponseBody
-    public InfoDistrict getInfoDistrict() {
-        return createMockInfoDistrict();
+    public List<InfoDistrict> getAllInfodistricts() {
+        return service.getAll();
     }
 
-    private InfoDistrict createMockInfoDistrict() {
-        InfoDistrict infoDistrict= new InfoDistrict();
-        infoDistrict.getId();
-        infoDistrict.getName();
-        return infoDistrict;
+    @RequestMapping(value = "/infodistricts/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public InfoDistrict getInfodistrict(@PathVariable("id") Integer infoID) {
+        return service.getByID(infoID);
     }
+
+    @RequestMapping(value = "/infodistricts", method = RequestMethod.POST)
+    @ResponseBody
+    public InfoDistrict saveAndUpdateInfoDistrict(@RequestBody InfoDistrict infoDistrict) {
+        return service.saveAndUpdate(infoDistrict);
+    }
+
+    @RequestMapping(value = "/infodistricts/{id}", method = RequestMethod.POST)
+    @ResponseBody
+    public void deleteInfoDistrict(@PathVariable("id") Integer infoID) {
+        service.remove(infoID);
+    }
+
+
 
 }

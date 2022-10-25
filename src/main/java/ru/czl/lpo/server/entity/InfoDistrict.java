@@ -16,9 +16,6 @@ public class InfoDistrict {
     @Column(name = "name", nullable = true, length = -1)
     private String name;
 
-    public InfoDistrict() {
-    }
-
     public Integer getId() {
         return id;
     }
