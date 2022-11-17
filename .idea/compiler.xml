@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ru.lpo.server.rep" />
         <module name="lpo.server.rep" />
+        <module name="lpoServerRep 17.11.22" />
       </profile>
     </annotationProcessing>
   </component>
