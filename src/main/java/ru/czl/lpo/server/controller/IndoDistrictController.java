@@ -7,11 +7,10 @@ import ru.czl.lpo.server.entity.InfoDistrict;
 import ru.czl.lpo.server.service.InfoDistrictService;
 
 import java.util.List;
-import java.util.Optional;
 
 //@RestController
 @Controller
-public class LpoController {
+public class IndoDistrictController {
 
     @Autowired
     private InfoDistrictService service;

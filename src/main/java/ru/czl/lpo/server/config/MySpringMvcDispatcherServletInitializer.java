@@ -1,16 +1,7 @@
-package ru.czl.lpo.server;
+package ru.czl.lpo.server.config;
 
-import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import ru.czl.lpo.server.config.WebConfig;
-import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.ContextLoaderListener;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import ru.czl.lpo.server.config.SpringConfig;
 
 //public class ApplicationInitializer implements WebApplicationInitializer {
 //
@@ -27,7 +18,7 @@ import javax.servlet.ServletRegistration;
 //        servlet.setLoadOnStartup(1);
 //
 //    }
-public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class MySpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
@@ -36,7 +27,7 @@ public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherSe
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[] {WebConfig.class};
+        return new Class[] {SpringConfig.class};
     }
 
     @Override
