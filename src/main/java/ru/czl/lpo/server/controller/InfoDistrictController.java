@@ -10,14 +10,20 @@ import java.util.List;
 
 //@RestController
 @Controller
-public class IndoDistrictController {
+@RequestMapping("/infodistrict")
+public class InfoDistrictController {
 
     @Autowired
     private InfoDistrictService service;
 
-    @GetMapping("/hello-world")
+    @GetMapping("/hello-world") //http://localhost:8080/infodistrict/hello-world
     public String sayHello() {
-        return "hello_world";
+        return "InfoDistrict/hello";
+    }
+
+    @GetMapping("/test") //http://localhost:8080/infodistrict/test
+    public String testInfodistrict() {
+        return "InfoDistrict/test";
     }
 
 //    @Autowired
