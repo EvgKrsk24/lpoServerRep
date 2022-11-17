@@ -1,6 +1,7 @@
 package ru.czl.lpo.server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ru.czl.lpo.server.entity.InfoDistrict;
 import ru.czl.lpo.server.service.InfoDistrictService;
@@ -8,11 +9,17 @@ import ru.czl.lpo.server.service.InfoDistrictService;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
+//@RestController
+@Controller
 public class LpoController {
 
     @Autowired
     private InfoDistrictService service;
+
+    @GetMapping("/hello-world")
+    public String sayHello() {
+        return "hello_world";
+    }
 
 //    @Autowired
 //    private InfoDistrictRepository infoDistrictRepository;
