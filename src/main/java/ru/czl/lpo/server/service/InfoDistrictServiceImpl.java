@@ -19,7 +19,8 @@ public class InfoDistrictServiceImpl implements InfoDistrictService {
         return repository.findAll();
     }
 
-     public InfoDistrict getByID(Integer id){
+    @Override
+    public InfoDistrict getByID(Integer id){
         return repository.findById(id).orElse(null);
     }
 
