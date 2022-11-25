@@ -18,11 +18,15 @@ public class InfoRegionsServiceImpl implements InfoRegionsService {
 //    public List<InfoRegions> getAll() {
 //        return repository.findAll();
 //    }
+    @Override
+    public List<InfoRegions> index() {
+    return repository.findAll();
+}
 
     @Override
     public InfoRegions getByID(Integer id) {
         return repository.findById(id).orElse(null);
-    }
+    } //show
 
     @Override
     public InfoRegions saveAndUpdate(InfoRegions infoRegions) {return repository.saveAndFlush(infoRegions); }
@@ -30,8 +34,5 @@ public class InfoRegionsServiceImpl implements InfoRegionsService {
     @Override
     public void remove(Integer id) { repository.deleteById(id);  }
 
-    @Override
-    public List<InfoRegions> findAll() {
-        return repository.findAll();
-    }
+
 }

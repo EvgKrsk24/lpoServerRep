@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Все регионы</title>
+</head>
+<body>
+
+<!--Проходимся по списку inforegionsall-->
+<div th:each="region : ${inforegionsall}">
+    <a th:text="${region.getName()}">region</a>
+</div>
+</body>
+</html>

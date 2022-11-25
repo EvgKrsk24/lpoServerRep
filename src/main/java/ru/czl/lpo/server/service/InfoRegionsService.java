@@ -11,5 +11,5 @@ public interface InfoRegionsService {
     InfoRegions saveAndUpdate(InfoRegions infoRegions);
     void remove(Integer id);
 
-    List<InfoRegions> findAll();
+    List<InfoRegions> index();
 }
