@@ -8,7 +8,7 @@
 
 <!--Проходимся по списку inforegionsall-->
 <div th:each="region : ${inforegionsall}">
-    <a th:text="${region.getName()}">region</a>
+    <a th:href="@{inforegions/{id}(id=${region.getId()})}" th:text="${region.getName()}">RegioN</a>
 </div>
 </body>
 </html>
