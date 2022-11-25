@@ -6,8 +6,10 @@ import ru.czl.lpo.server.entity.InfoRegions;
 import java.util.List;
 
 public interface InfoRegionsService {
-    List<InfoRegions> getAll();
+//    List<InfoRegions> getAll();
     InfoRegions getByID(Integer id);
     InfoRegions saveAndUpdate(InfoRegions infoRegions);
     void remove(Integer id);
+
+    List<InfoRegions> findAll();
 }

@@ -1,21 +1,23 @@
 package ru.czl.lpo.server.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ru.czl.lpo.server.entity.InfoRegions;
 import ru.czl.lpo.server.repository.InfoDistrictRepository;
 import ru.czl.lpo.server.repository.InfoRegionsRepository;
 
 import java.util.List;
 
+@Service
 public class InfoRegionsServiceImpl implements InfoRegionsService {
 
     @Autowired
     private InfoRegionsRepository repository;
 
-    @Override
-    public List<InfoRegions> getAll() {
-        return repository.findAll();
-    }
+//    @Override
+//    public List<InfoRegions> getAll() {
+//        return repository.findAll();
+//    }
 
     @Override
     public InfoRegions getByID(Integer id) {
@@ -27,4 +29,9 @@ public class InfoRegionsServiceImpl implements InfoRegionsService {
 
     @Override
     public void remove(Integer id) { repository.deleteById(id);  }
+
+    @Override
+    public List<InfoRegions> findAll() {
+        return repository.findAll();
+    }
 }
