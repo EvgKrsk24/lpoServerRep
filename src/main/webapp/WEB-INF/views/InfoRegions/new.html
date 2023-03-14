@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New inforegion</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/inforegions}" th:object="${inforegionsid}">
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+
+<!--    <label for="id">Enter id: </label>-->
+<!--    <input type="integer" th:field="*{id}" id="id"/>-->
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+
+</body>
+</html>

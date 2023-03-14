@@ -10,5 +10,11 @@
 <div th:each="region : ${inforegionsall}">
     <a th:href="@{inforegions/{id}(id=${region.getId()})}" th:text="${region.getName()}">RegioN</a>
 </div>
+
+<br/>
+<hr/>
+
+<a href="/inforegions/new">Create new Region</a>
+
 </body>
 </html>

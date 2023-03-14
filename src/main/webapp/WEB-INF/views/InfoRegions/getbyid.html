@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Регион</title>
@@ -7,6 +7,12 @@
 <body>
 <p th:text="${inforegionsid.getName()}">Value</p>
 <p th:text="${inforegionsid.getId()}">Value</p>
+
+<a th:href="@{/inforegions/{id}/edit(id=${inforegionsid.getId()})}">Edit</a>
+
+<form th:method="DELETE" th:action="@{/inforegions/{id}(id=${inforegionsid.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
 
 </body>
 </html>

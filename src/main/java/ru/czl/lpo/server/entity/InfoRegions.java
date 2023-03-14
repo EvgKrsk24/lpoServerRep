@@ -19,6 +19,17 @@ public class InfoRegions {
     @Column(name = "filial_id", nullable = true)
     private Integer filialId;
 
+    public InfoRegions() {
+
+    }
+
+    public InfoRegions(Integer id, String name, String nameGenitive,Integer filialId) {
+        this.id=id;
+        this.name=name;
+        this.nameGenitive=nameGenitive;
+        this.filialId=filialId;
+    }
+
     public Integer getId() {
         return id;
     }
